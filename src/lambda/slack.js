@@ -7,7 +7,7 @@ export function handler(event, context, callback) {
     return callback(null, { statusCode: 410, body: "Unsupported Request Method" });
   }
   const claims = context.clientContext && context.clientContext.user;
-  if (!claim) {
+  if (!claims) {
     return callback(null, {statusCode: 401, body: "You must be signed in to call this function"})
   }
   try {
