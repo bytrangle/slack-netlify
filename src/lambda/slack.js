@@ -29,6 +29,7 @@ class IdentityAPI {
   request(path, options = {}) {
     const headers = this.headers(options.headers || {});
     return fetch(this.apiURL + path, { ...options, headers }).then(response => {
+      console.log('Fuck you')
       const contentType = response.headers.get("Content-Type");
       if (contentType && contentType.match(/json/)) {
         return this.parseJsonResponse(response);
