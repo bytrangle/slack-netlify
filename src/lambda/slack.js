@@ -68,7 +68,7 @@ function updateUser(identity, user, app_metadata) {
   });
 }
 
-const oneHour = (60 * 60 * 1000);
+const oneHour = (1 * 60 * 1000);
 
 export function handler(event, context, callback) {
   if (event.httpMethod !== "POST") {
