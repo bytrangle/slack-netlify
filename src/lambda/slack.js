@@ -62,7 +62,7 @@ Update the app_metadata of a user
 function updateUser(identity, user, app_metadata) {
   const api = new IdentityAPI(identity.url, identity.token);
   const new_app_metadata = { ... user.app_metadata, ...app_metadata };
-  return api.request(`/admin/users/${id}`, {
+  return api.request(`/admin/users/${user.id}`, {
     method: "PUT",
     body: JSON.stringify({ app_metadata: new_app_metadata })
   });
